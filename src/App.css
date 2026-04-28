@@ -1,0 +1,28 @@
+/* body {
+  margin: 0;
+} */
+
+/* header {
+  background-color: #06151a;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+} */
+
+/* section {
+  display: flex;
+  justify-content: center;
+} */
+
+/* section img {
+  max-width: 90%;
+} */
+
+/* .my-dialog::backdrop {
+  @apply bg-black/60 opacity-75;
+} */
+
+.my-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.75;
+}
