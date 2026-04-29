@@ -1,6 +1,9 @@
 import { FAVORITE_TYPE_NAMES } from "../shared/my-favorites.store";
+import { useStore } from "@nanostores/react";
+import { $selectedTab } from "../shared/my-favorites.store";
 
-export function HeaderNavigation({ selectedTab, onSelectTab }) {
+export function HeaderNavigation() {
+  const selectedTab = useStore($selectedTab);
   return (
     <header className="flex justify-between items-center mt-4 mb-2 w-400 max-w-11/12 m-auto space-y-6">
       <h1 className="text-3xl font-bold text-[#F6C667]">My Favorites</h1>
@@ -18,7 +21,7 @@ export function HeaderNavigation({ selectedTab, onSelectTab }) {
                 ? "bg-[#F6C667] text-[#140F1F] border-[#F6C667]"
                 : "hover:text-[#FFDD87]"
             }`}
-            onClick={() => onSelectTab(tab)}
+            onClick={() => $selectedTab.set(tab)}
           >
             {tab}
           </button>

@@ -3,7 +3,7 @@ import { Banner } from "./components/Banner";
 import { FavoriteCard } from "./components/FavoriteCard";
 import { FavoriteForm } from "./components/FavoriteForm";
 import { FavoriteTypeTitle } from "./components/FavoriteType";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import {
   FAVORITE_TYPE_NAMES,
   favoriteTypeOptions,
@@ -14,7 +14,6 @@ import { GridCards } from "./components/GridCards";
 
 export default function App() {
   const [favorites, setFavorites] = useState(() => loadFavorites());
-  const [selectedTab, setSelectedTab] = useState("All");
 
   useEffect(() => {
     console.log("FAVORITES UPDATED", favorites);
@@ -36,15 +35,8 @@ export default function App() {
     <main>
       {/* <Banner /> */}
       <FavoriteForm types={favoriteTypeOptions} addFavorite={addFavorite} />
-      <HeaderNavigation
-        selectedTab={selectedTab}
-        onSelectTab={setSelectedTab}
-      />
-      <GridCards
-        types={favoriteTypeOptions}
-        favorites={favorites}
-        removeFavorite={removeFavorite}
-      />
+      <HeaderNavigation />
+      <GridCards favorites={favorites} removeFavorite={removeFavorite} />
     </main>
   );
 }

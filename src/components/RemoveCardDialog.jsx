@@ -31,7 +31,7 @@ export function RemoveCardDialog({ favorite, removeFavorite }) {
         className="my-dialog bg-[#553e78] text-[#c8b8d4] text-lg border border-[#8F8596] w-160 rounded-2xl p-4 shadow-lg fixed top-2/4 left-2/4 -translate-1/2"
         ref={dialogRef}
       >
-        <p>
+        <p className="wrap-break-word">
           Are you sure you want to remove {favorite.name} from{" "}
           {favorite.type.name} list?
         </p>

@@ -17,3 +17,7 @@ export const saveFavorites = (favorites) => {
     console.error("Error saving favorites:", error);
   }
 };
+
+// export const addFavoriteNEW = (favorites, newFavorite) => {
+//   return [...favorites, newFavorite];
+// };

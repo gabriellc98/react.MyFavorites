@@ -29,7 +29,7 @@ export function FavoriteCard({ favorite, removeFavorite }) {
       </div>
 
       <div className="px-2 items-start gap-2">
-        <h2 className="text-lg font-semibold text-[#CFC6B8]">
+        <h2 className="text-lg font-semibold text-[#CFC6B8] wrap-break-word line-clamp-2">
           {favorite.name}
         </h2>
         <p className="text-sm text-[#8F8596]">{favorite.type.name}</p>
@@ -40,3 +40,4 @@ export function FavoriteCard({ favorite, removeFavorite }) {
     </div>
   );
 }
+// break-words
